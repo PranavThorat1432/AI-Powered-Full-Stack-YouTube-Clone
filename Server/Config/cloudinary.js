@@ -1,0 +1,32 @@
+import dotenv from 'dotenv';
+dotenv.config();
+import { v2 as cloudinary } from 'cloudinary';
+import fs from 'fs';
+
+
+const uploadOnCloudinary = async (filePath) => {
+    cloudinary.config({ 
+        cloud_name: process.env.CLOUD_NAME, 
+        api_key: process.env.CLOUD_API_KEY, 
+        api_secret: process.env.CLOUD_API_SECRET
+    });
+    
+    try {
+        if(!filePath) {
+            return null;
+        }
+
+        const result = await cloudinary.uploader.upload(filePath, {
+            resource_type: 'auto'  // for both images and videos
+        });
+
+        fs.unlinkSync(filePath);   // it deletes media (images, videos) from Public folder
+        return result.secure_url;
+        
+    } catch (error) {
+        console.log(error);
+        fs.unlinkSync(filePath);
+    }
+};
+
+export default uploadOnCloudinary;
