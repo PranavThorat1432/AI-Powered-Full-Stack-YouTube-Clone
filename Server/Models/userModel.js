@@ -1,0 +1,56 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+    userName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    photoUrl: {
+        type: String,
+        default: ''
+    },
+    channel: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Channel'
+    },
+    history: [
+        {
+            contentId: {
+                type: mongoose.Schema.Types.ObjectId,
+                refPath: 'history.contentType'    // Dynamically decides between video or short
+            },
+            contentType: {
+                type: String,
+                enum: ['Video', 'Short'],
+                required: true
+            },
+            watchedAt: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ],
+    resetOTP: {
+        type: String,
+    },
+    otpExpires: {
+        type: Date,
+    },
+    isOtpVerified: {
+        type: Boolean,
+        default: false,
+    },
+
+}, {timestamps: true});
+
+const User = mongoose.model('User', userSchema);
+export default User;
