@@ -14,7 +14,6 @@ const useGetSubscribedData = () => {
                 const result = await axios.get(`${serverUrl}/api/user/get-subscribed-data`, {
                     withCredentials: true
                 });
-                console.log(result.data);
                 dispatch(setSubscribedChannels(result.data.subscribedChannels));
                 dispatch(setSubscribedVideos(result.data.videos));
                 dispatch(setSubscribedShorts(result.data.shorts));
