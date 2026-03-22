@@ -18,7 +18,6 @@ const useGetContentData = () => {
                 const result = await axios.get(`${serverUrl}${endpoint}`, {
                     withCredentials: true
                 });
-                console.log(result.data);
                 dispatch(setAllVideosData(result.data));
                 
             } catch (error) {
@@ -38,7 +37,6 @@ const useGetContentData = () => {
                 const result = await axios.get(`${serverUrl}${endpoint}`, {
                     withCredentials: true
                 });
-                console.log(result.data);
                 dispatch(setAllShortsData(result.data));
                 
             } catch (error) {
