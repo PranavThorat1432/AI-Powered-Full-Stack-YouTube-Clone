@@ -14,7 +14,6 @@ const useGetRecommendedContent = () => {
                 const result = await axios.get(`${serverUrl}/api/user/recommendation`, {
                     withCredentials: true
                 });
-                console.log(result.data);
                 dispatch(setRecommendedContent(result.data));
                 
             } catch (error) {
