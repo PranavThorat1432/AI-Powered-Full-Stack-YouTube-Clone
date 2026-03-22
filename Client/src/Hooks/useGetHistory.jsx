@@ -23,7 +23,6 @@ const useGetHistory = () => {
 
                 dispatch(setVideoHistory(videos));
                 dispatch(setShortHistory(shorts));
-                console.log({videos, shorts})
                 
             } catch (error) {
                 console.log(error);
