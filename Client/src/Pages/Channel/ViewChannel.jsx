@@ -16,7 +16,7 @@ const ViewChannel = () => {
       <div className='w-full h-32 md:h-48 lg:h-60 bg-linear-to-r from-gray-800 to-gray-900 rounded-lg mt-15'>
         {channelData?.banner ? (
           <img 
-            src={channelData.banner} 
+            src={channelData.banner}  
             alt="Channel Banner" 
             className="w-full h-full object-cover rounded-lg"
           />
