@@ -1,11 +1,13 @@
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const isAuth = async (req, res, next) => {
     try {
         const {token} = req.cookies;
         if(!token) {
             return res.status(400).json({
-                message: 'User dost not have token!'
+                message: 'User does not have token!'
             });
         }
 
