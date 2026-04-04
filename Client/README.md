@@ -1,1 +1,1 @@
-# Frontend of tthe Project!!
+# Frontend of the Project!!
