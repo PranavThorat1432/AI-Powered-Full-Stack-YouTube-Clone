@@ -95,6 +95,17 @@ The backend is an Express + MongoDB REST API, while the frontend is a React + Vi
 
 ## 🎬 Project Preview
 
+![1](https://github.com/user-attachments/assets/6b0805a7-5b90-4867-a243-9b60b0ceb6f6)
+
+![2](https://github.com/user-attachments/assets/db2fed17-9f60-4f1c-b4d1-09f557d7c940)
+
+![3](https://github.com/user-attachments/assets/191c0713-7e41-494d-b225-676f0966260c)
+
+![4](https://github.com/user-attachments/assets/3d79bb5b-6865-4589-a2b9-28b695a47290)
+
+![5](https://github.com/user-attachments/assets/012f6346-19d0-49e5-99e7-8df1675f90d9)
+
+
 ### User Experience Flow
 ```
 1. Landing Page → Sign Up/In
@@ -475,7 +486,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 | Platform              | Link                                                          |
 | --------------------- | ------------------------------------------------------------- |
 | 🧑 **Author**      | Pranav Thorat                      |
-| 🌐 **Live Demo**      | [View Now](https://virtual-courses-lms-platform.vercel.app)                        |
+| 🌐 **Live Demo**      | [View Now](https://youtube-pyta.onrender.com)                        |
 | 🧑‍💻 **GitHub Repo** | [View Code](https://github.com/PranavThorat1432/AI-Powered-Full-Stack-YouTube-Clone) |
 | 💼 **LinkedIn**       | [Connect with Me](https://www.linkedin.com/in/curiouspranavthorat)       |
 | 📩 **Email**          | [pranavthorat95@gmail.com](mailto:pranavthorat95@gmail.com)   |
